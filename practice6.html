@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script>
+button{
+  
+}
+            </script>
+        </head>
+
+        <body>
+            <input type="text" id="theName">
+            <button type="button">Click Me!</button>
+            <h3> My Name is </h3>
+
+            <script>
+    						//ADD CODE HERE
+                $("button").click(()=>{
+                  let name = $("input#theName").val();
+                   let sentence = `${name}`
+                   document.write(sentence);
+                 })
+
+            </script>
+        </body>
+
+    </html>
