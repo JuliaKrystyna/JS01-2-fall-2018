@@ -8,10 +8,13 @@
 
         <h2 id="sport">Baseball</h2>
         <button>Give me a sentence!</button>
+        <p> </p>
 
         <script>
-        const newSentence = () => {
-        $('#sport').html ('The Yankees play Baseball');
+        const newSentence = () =>{
+          const sport = $("#sport").text();
+          const sentence = "The Yankees play " + sport;
+          $("p").html(sentence);
         };
 
         $('button').click(newSentence);
