@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: lavender;
+    }
+
+    img {
+      width: 120px;
+      length: 120px;
+    }
+
+    button {
+      width: 250px;
+      length: 200px;
+      background-color: lightblue;
+    }
+    p{
+      color: blue;
+    }
+    h4{
+    color: red;
+    }
+    h3{
+    color: purple;
+    }
+  </style>
+
+</head>
+
+<body>
+  <img src="http://www.madlibs.com/content/themes/madlibs/dist/images/intro_logo.png" </img> <br>
+  <p> created by: Julia K. </p>
+  <h4>
+  Name: <input type="text" id="Name"> <br>
+   Grade that Your In: <input type="text" id="Grade"> <br>
+   Age: <input type="text" id="Age"> <br>
+   Important person in Your Life: <input type="text" id="Person"> <br>
+   City you live in: <input type="text" id="City">  <br>
+ </h4>
+  <p id = "generate"> </p>
+  <h3> </h3>
+  <button> Generate your MadLibs </button>
+
+<script>
+
+const MadLibs = () => {
+  const Name = $('#Name').val();
+  const Grade = $('#Grade').val();
+  const Age = $('#Age').val();
+  const Person = $('#Person').val();
+  const City = $('#City').val();
+
+const Generate = Name + " is in the " + Grade + " grade and is " + Age + " years old. " + Name + " lives in " + City + " and one very important person in " + Name + "s life is " + Person + "."
+$('#generate').html(Generate);
+
+const Thanks = " THANK YOUU FOR PARTICIPATING IN MY MADLIBS!!"
+$('h3').html(Thanks);
+
+};
+
+$('button').click(MadLibs);
+</script>
+</body>
+
+</html>
