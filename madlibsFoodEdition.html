@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: lavender;
+    }
+
+    h3 {
+      color: blue;
+    }
+
+    h4 {
+      color: red;
+    }
+
+    img {
+      width: 120px;
+      length: 120px;
+    }
+
+    p {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="http://www.madlibs.com/content/themes/madlibs/dist/images/intro_logo.png" </img> <br>
+  <p> created by: Julia K. {The Food Edition}</p>
+  <h3>
+  What is your name?: <input type="text" id="name"> <br>
+  What did you have for breakfast?: <input type="text" id="Breakfast"> <br>
+  What did you have for lunch?: <input type="text" id="Lunch"> <br>
+  What did you have for dinner?: <input type="text" id="Dinner"> <br>
+</h3>
+  <h4 id=s entence1> </h4>
+  <h4 id=s entence2> </h4>
+  <h4 id=s entence3> </h4>
+
+  <button id=s ubmit> Submit </button>
+
+  <script>
+    const sentence = () => {
+      const name = $('#name').val();
+      const breakfast = $('#Breakfast').val();
+      const lunch = $('#Lunch').val();
+      const dinner = $('#Dinner').val();
+
+      const newSentence1 = ' For Breakfast ' + name + ' had ' + breakfast + ".";
+      $('#sentence1').html(newSentence1);
+      const newSentence2 = ' For Lunch ' + name + ' had ' + lunch + ".";
+      $('#sentence2').html(newSentence2);
+      const newSentence3 = ' For Dinner ' + name + ' had ' + dinner + ".";
+      $('#sentence3').html(newSentence3);
+    };
+
+    $('#submit').click(sentence);
+  </script>
+
+</body>
+
+
+
+
+
+
+
+</html>
